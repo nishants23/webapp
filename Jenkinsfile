@@ -1,7 +1,7 @@
 pipeline {
   agent any 
   tools {
-    mvn "Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)"
+   ant "Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)"
   }
   
   stages {
