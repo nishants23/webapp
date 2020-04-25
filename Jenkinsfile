@@ -1,7 +1,18 @@
+ environment {
+        GROOVY_HOME = tool name: 'Groovy-2.4.9', type: 'hudson.plugins.groovy.GroovyInstallation'
+    }
+    stages {
+        stage('Run Groovy') {
+            steps {
+                bat "${groovy_home}/bin/groovy <script.name>"
+            }
+        }
+    }
+
 pipeline {
   agent any 
   tools {
-   Maven "3.5.2"
+   Maven 'maven'
   }
   
   stages {
