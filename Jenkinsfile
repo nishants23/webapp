@@ -1,4 +1,8 @@
- environment {
+
+
+pipeline {
+  agent any 
+  environment {
         GROOVY_HOME = tool name: 'Groovy-2.4.9', type: 'hudson.plugins.groovy.GroovyInstallation'
     }
     stages {
@@ -8,9 +12,6 @@
             }
         }
     }
-
-pipeline {
-  agent any 
   tools {
    Maven 'maven'
   }
